@@ -57,7 +57,7 @@ jobs:
     - name: Install cosign
       uses: sigstore/cosign-installer@v3
     - name: Verify and run images
-      env:
+      env: 
         COSIGN_YES: "true"
       run: |
         APP_IMAGE=${{ secrets.DOCKER_USERNAME }}/al-app:${{ github.sha }}
